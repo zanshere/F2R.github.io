@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiri</title>
+    <style>
+        html {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-bottom : 10px;  
+    background-color: black;
+    color: white;
+    font-style: normal;
+}
+
+ul.menu li a.menu__link {
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+    transition: all .3s ease;
+}
+
+ul.menu li a.menu__link:hover {
+    background-color: white;
+    color: black;
+    transition: all .3s ease;
+    border-radius: 10px;
+    box-shadow: white 1px 0px 15px;
+}
+
+ul.menu li a.active {
+  color: black;
+  box-shadow: cyan 1px 0px 15px;
+  border-radius: 10px;
+  background-color: cyan;
+}
+</style>
+</head>
+<body>
+    <h4 id="Typed">Menu</h4>
+    <HR>
+    <ul class="menu">
+        <li><a class="menu__link" href="Fkanan.html" target="kanan" style="text-decoration: none;">Home</a><br><br></li>
+        <li><a class="menu__link" href="Sekolah.html" target="kanan" style="text-decoration: none;">School</a></li>
+        <br>
+        <hr>
+        <h4>Liat Berita Lainnya</h4>
+        <hr>
+        <br>
+        <li><a class="menu__link" href="Pavana-Music.html" target="kanan" style="text-decoration: none;">pavana</a></li>
+        <br>
+        <li><a class="menu__link" href="Gitar-Gibson.html" target="kanan" style="text-decoration: none;">Gitar Gibson</a></li>
+    </ul>
+    <!-- <hr>
+    <h4>Liat Berita Lainnya</h4>
+    <hr>
+    <br>
+    <ul class="menu">
+        <li><a class="menu__link"  href="Pavana-Music.html" target="kanan" style="text-decoration: none;">pavana</a></li>
+        <br>
+        <li><a class="menu__link" href="Gitar-Gibson.html" target="kanan" style="text-decoration: none;">Gitar Gibson</a></li>
+    </ul> -->
+
+    <script>
+     // 1. tangkap element dengan class menu
+    const menu = document.querySelector(".menu");
+    // 2. jika element dengan class menu diklik
+    menu.addEventListener('click', function(e) {
+    // 3. maka ambil element apa yang diklik oleh user
+    const targetMenu = e.target;
+    // 4. lalu cek, jika element itu adalah link dengan class menu__link
+    if(targetMenu.classList.contains('menu__link')) {    
+    // 5. maka ambil menu link yang aktif
+    const menuLinkActive = document.querySelector("ul li a.active");
+    // 6. lalu cek, Jika menu link active ada dan menu yang di klik user adalah menu yang tidak sama dengan menu yang aktif, (cara cek-nya yaitu dengan membandingkan value attribute href-nya)
+    if(menuLinkActive !== null && targetMenu.getAttribute('href') !== menuLinkActive.getAttribute('href')) {
+    // 7. maka hapus class active pada menu yang sedang aktif
+    menuLinkActive.classList.remove('active');
+        }
+    // 8. terakhir tambahkan class active pada menu yang di klik oleh user
+    targetMenu.classList.add('active');
+    }
+});
+    </script>
+</body>
+</html>     

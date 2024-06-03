@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 100px;
+            border-radius: 10px;    
+        }
+
+        .f2r {
+            text-align: left;
+            font-size: 30px; 
+            padding: 12px 12px;
+            color: white;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            transition: all.5s ease;
+        }
+
+        img:hover {
+            box-shadow: white 1px 0px 20px;
+            transition: all.5s ease;
+        }
+
+        .navbar li .direct {
+            text-decoration: none;
+            color: white;
+            transition: all.4s ease;
+            border-radius: 10px;
+            padding: 10px 10px;
+        }
+
+        .navbar li .direct:hover {
+            transition: all .4s ease;
+            background-color: red ;
+            border-radius: 10px;
+            box-shadow: white 1px 0px 10px;
+        }
+
+        ul.navbar li .direct.active {
+            color: white;
+            box-shadow: white 1px 0px 10px;
+            border-radius: 10px;
+            background-color: red;
+        }
+
+    body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #1E90FF; /* Warna latar belakang biru laut */
+}
+
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px; /* Sesuaikan tinggi gelombang */
+    overflow: hidden;
+}
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px,0,0);
+    }
+    100% { 
+        transform: translate3d(85px,0,0);
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <h2 class="f2r">F2R.NET</h2>
+    <img class="logo" src="Image/large.png" alt="">
+    <hr>
+
+    <center>
+        <h3 style="color: white;">F2R.NET adalah sebuah website berita seputar dunia musik</h3>
+        <img src="Image/large.png" alt="" class="img">
+    </center>
+    
+        <ul class="navbar">
+            <li><a class="direct" href="Pavana-Music.html">Berita Mengenai Pavana</a></li>
+            <br>    
+            <li><a class="direct" href="Gitar-Gibson.html">Berita Mengenai gitar Gibson</a></li>
+        </ul>
+
+    <div class="wave-container">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                <use href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
+    </div>
+
+</body>
+</html>
